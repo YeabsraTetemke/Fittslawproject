@@ -1,0 +1,148 @@
+
+/* Fitts' Law Experiment - CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f6f9;
+    color: #222;
+    text-align: center;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Welcome Screen */
+
+#welcomeScreen {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #234b80;
+}
+
+p {
+    line-height: 1.6;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 75%;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+button {
+    padding: 12px 25px;
+    margin-top: 15px;
+    background-color: #234b80;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #16345c;
+}
+
+/* Experiment Screen */
+
+#experimentScreen {
+    width: 100%;
+}
+
+#progress {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#instructions {
+    font-size: 16px;
+}
+
+/* Testing Area */
+
+#experimentArea {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 500px;
+    margin: 20px auto;
+    background-color: white;
+    border: 2px solid #234b80;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+/* Center Starting Position */
+
+#startPoint {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #234b80;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Target Circle */
+
+#targetCircle {
+    position: absolute;
+    background-color: #28a745;
+    border: 2px solid #16702e;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+}
+
+/* Trial Feedback */
+
+#feedback {
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 25px;
+}
+
+/* Completion Screen */
+
+#completionScreen {
+    max-width: 650px;
+    margin: 80px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Layout */
+
+@media (max-width: 700px) {
+    #welcomeScreen,
+    #completionScreen {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    #experimentArea {
+        height: 400px;
+    }
+}

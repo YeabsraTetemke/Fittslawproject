@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fitts' Law Experiment</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Welcome and Consent Screen -->
+    <div id="welcomeScreen">
+        <h1>Fitts' Law Experiment</h1>
+
+        <h2>Welcome!</h2>
+
+        <p>
+            This experiment measures how quickly and
+            accurately users can click circles of
+            different sizes and distances.
+        </p>
+
+        <p>
+            You will complete 10 blocks of 32 trials,
+            for a total of 320 trials.
+        </p>
+
+        <p>
+            Participation is voluntary. You must be
+            at least 18 years old to participate.
+            You may stop at any time.
+        </p>
+
+        <label for="participantID">
+            Participant ID:
+        </label>
+
+        <input
+            type="text"
+            id="participantID"
+            placeholder="Example: P01"
+        >
+
+        <p>
+            <label>
+                <input type="checkbox" id="ageConfirm">
+                I confirm that I am 18 years or older.
+            </label>
+        </p>
+
+        <p>
+            <label>
+                <input type="checkbox" id="consentCheckbox">
+                I have read the information above and
+                voluntarily agree to participate.
+            </label>
+        </p>
+
+        <button id="startButton">
+            I Agree - Start Experiment
+        </button>
+    </div>
+
+
+    <!-- Experiment Screen -->
+    <div id="experimentScreen" hidden>
+
+        <h2>Fitts' Law Testing</h2>
+
+        <p id="progress">
+            Block 1 of 10 | Trial 1 of 32
+        </p>
+
+        <p id="instructions">
+            Return your cursor to the center,
+            then click the circle as quickly
+            and accurately as possible.
+        </p>
+
+        <div id="experimentArea">
+
+            <div id="startPoint"></div>
+
+            <div id="targetCircle"></div>
+
+        </div>
+
+        <p id="feedback"></p>
+
+    </div>
+
+
+    <!-- Completion Screen -->
+    <div id="completionScreen" hidden>
+
+        <h1>Experiment Completed!</h1>
+
+        <p>
+            Thank you for participating in
+            the Fitts' Law experiment.
+        </p>
+
+        <p id="resultsSummary"></p>
+
+        <button id="downloadButton">
+            Download Results (CSV)
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
